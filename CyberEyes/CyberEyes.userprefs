@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{BA53BEE5-0345-4BC8-B6D4-E3FED6DA76A6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CyberEyes/TakePhotoPage.xaml.cs">
+    <Files>
+      <File FileName="CyberEyes/ConfirmPhotoPage.xaml.cs" Line="24" Column="3" />
+      <File FileName="CyberEyes/TakePhotoPage.xaml" Line="19" Column="49" />
+      <File FileName="CyberEyes/TakePhotoPage.xaml.cs" Line="15" Column="15" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.CyberEyes.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.35D25494-67E5-4344-BEEF-EC776C3478D1" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.CyberEyes.Droid PreferredExecutionTarget="Android.Test_Device_Nexus5" />
+  <MultiItemStartupConfigurations />
+</Properties>
