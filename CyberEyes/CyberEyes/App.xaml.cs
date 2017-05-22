@@ -4,6 +4,8 @@ namespace CyberEyes
 {
 	public partial class App : Application
 	{
+		public Config config = new Config();
+
 		public App()
 		{
 			InitializeComponent();
