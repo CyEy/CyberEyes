@@ -51,6 +51,7 @@
     <EmbeddedResource Include="EndScreenPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Images\blank_camera.png" />
     <EmbeddedResource Include="Images\blank_photo_icon.png" />
     <EmbeddedResource Include="Images\camera_icon.png" />
   </ItemGroup>

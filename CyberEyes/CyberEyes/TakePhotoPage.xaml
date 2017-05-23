@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CyberEyes.TakePhotoPage">
-<ContentPage.Padding>
+	<ContentPage.Padding>
 		<OnPlatform x:TypeArguments="Thickness">
 			<OnPlatform.iOS>
 				        0, 20, 0, 0
@@ -15,7 +15,11 @@
 	</ContentPage.Padding>
 	<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
 		<Label FontSize="24" Text="Take Photo of: [item name]" HorizontalOptions="CenterAndExpand" />
-
-		<Button Text="Take Photo" Clicked="Handle_TakeClicked"/>
+		<Frame BackgroundColor="Black">
+			<Frame BackgroundColor="White">
+				<Image x:Name="CameraDisplay" />
+			</Frame>
+		</Frame>
+		<Button Text="Take Photo" Clicked="Handle_TakeClicked" />
 	</StackLayout>
 </ContentPage>

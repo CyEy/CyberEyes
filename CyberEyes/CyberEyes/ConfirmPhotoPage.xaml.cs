@@ -10,6 +10,8 @@ namespace CyberEyes
 		public ConfirmPhotoPage()
 		{
 			InitializeComponent();
+
+			CameraDisplay.Source = ImageSource.FromResource("CyberEyes.Images.blank_camera.png");
 		}
 
 		void Handle_KeepClicked(object sender, System.EventArgs e)
