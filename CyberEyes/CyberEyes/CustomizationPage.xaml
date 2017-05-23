@@ -13,8 +13,49 @@
 				      </OnPlatform.WinPhone>
 		</OnPlatform>
 	</ContentPage.Padding>
-	<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Spacing="80">
-		<Label FontSize="24" Text="Customizaiton Page" HorizontalOptions="CenterAndExpand" />
-		<Button Text="Start Game" Clicked="Handle_StartClicked" />
-	</StackLayout>
+	<ScrollView>
+		<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+			<Label FontSize="24" Text="Customizaiton Page" HorizontalOptions="CenterAndExpand" />
+			<Label Text="Select Difficulty Level:" HorizontalOptions="CenterAndExpand" />
+			<BoxView HeightRequest="1" Color="Accent" />
+			<Frame x:Name="easyFrame">
+				<Label Text="○ Easy" />
+				<Frame.GestureRecognizers>
+					<TapGestureRecognizer Tapped="Handle_EasyTapped" />
+				</Frame.GestureRecognizers>
+			</Frame>
+			<Frame x:Name="mediumFrame">
+				<Label Text="○ Medium" />
+				<Frame.GestureRecognizers>
+					<TapGestureRecognizer Tapped="Handle_MediumTapped" />
+				</Frame.GestureRecognizers>
+			</Frame>
+			<Frame x:Name="hardFrame">
+				<Label Text="○ Hard" />
+				<Frame.GestureRecognizers>
+					<TapGestureRecognizer Tapped="Handle_HardTapped" />
+				</Frame.GestureRecognizers>
+			</Frame>
+			<BoxView HeightRequest="3" Color="Accent" />
+			<Label Text="Select Categories:" HorizontalOptions="CenterAndExpand" />
+			<BoxView HeightRequest="1" Color="Accent" />
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Indoors" />
+				<Switch x:Name="indoorsSwitch" HorizontalOptions="EndAndExpand" Toggled="Handle_Toggled" StyleId="indoorsSwitch"/>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Outdoors" />
+				<Switch x:Name="outdoorsSwitch" HorizontalOptions="EndAndExpand" StyleId="outdoorsSwitch"/>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Facial Expressions" />
+				<Switch x:Name="facialExpressionsSwitch" HorizontalOptions="EndAndExpand" StyleId="facialExpressionsSwitch"/>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Colors" />
+				<Switch x:Name="colorsSwitch" HorizontalOptions="EndAndExpand" StyleId="colorSwitch" />
+			</StackLayout>
+			<Button Text="Start Game" Clicked="Handle_StartClicked" />
+		</StackLayout>
+	</ScrollView>
 </ContentPage>
