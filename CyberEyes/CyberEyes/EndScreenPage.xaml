@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CyberEyes.EndScreenPage">
-<ContentPage.Padding>
+	<ContentPage.Padding>
 		<OnPlatform x:TypeArguments="Thickness">
 			<OnPlatform.iOS>
 				        0, 20, 0, 0
@@ -13,9 +13,22 @@
 				      </OnPlatform.WinPhone>
 		</OnPlatform>
 	</ContentPage.Padding>
-	<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
-		<Label FontSize="24" Text="End of Game" HorizontalOptions="CenterAndExpand" />
-		<Button Text="Start New Game" 
-		Clicked="Handle_NewGameClicked"/>
+	<StackLayout>
+		<StackLayout x:Name="topLayout" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+			<Label FontSize="24" Text="Result" HorizontalOptions="CenterAndExpand" />
+			<Label FontSize="18" Text="Items Found: 8/10" HorizontalOptions="CenterAndExpand" />
+			<Label FontSize="18" Text="Total Points 17/20" HorizontalOptions="CenterAndExpand" />
+			<Label FontSize="18" Text="Time Elapsed: 09:12" HorizontalOptions="CenterAndExpand" />
+		</StackLayout>
+		<StackLayout x:Name="bottomLayout" Spacing="20" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+			<Label FontSize="20" Text="Your Rank:" HorizontalOptions="CenterAndExpand" />
+			<Label FontSize="22" Text="Master Treasure Hunter" HorizontalOptions="CenterAndExpand" />
+			<Frame BackgroundColor="Black">
+				<Frame BackgroundColor="White">
+					<Image x:Name="finalPhoto" />
+				</Frame>
+			</Frame>
+			<Button Text="Start New Game" Clicked="Handle_NewGameClicked" />
+		</StackLayout>
 	</StackLayout>
 </ContentPage>

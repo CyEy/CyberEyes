@@ -10,6 +10,7 @@ namespace CyberEyes
 		public EndScreenPage()
 		{
 			InitializeComponent();
+			finalPhoto.Source = ImageSource.FromResource("CyberEyes.Images.finalImage.jpg");
 		}
 
 		void Handle_NewGameClicked(object sender, System.EventArgs e)
