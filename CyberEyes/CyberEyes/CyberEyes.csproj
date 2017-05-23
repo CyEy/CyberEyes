@@ -52,6 +52,8 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Images\blank_camera.png" />
+    <EmbeddedResource Include="Images\blank_photo_icon.png" />
+    <EmbeddedResource Include="Images\camera_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -84,6 +86,7 @@
     </Compile>
     <Compile Include="Config.cs" />
     <Compile Include="Enumerations.cs" />
+    <Compile Include="ScavengerHuntItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

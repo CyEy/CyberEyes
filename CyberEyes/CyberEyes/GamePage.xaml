@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CyberEyes.GamePage">
-<ContentPage.Padding>
+	<ContentPage.Padding>
 		<OnPlatform x:TypeArguments="Thickness">
 			<OnPlatform.iOS>
 				        0, 20, 0, 0
@@ -15,15 +15,43 @@
 	</ContentPage.Padding>
 	<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
 		<Label FontSize="24" Text="Cyber Eyes" HorizontalOptions="CenterAndExpand" />
-		<Button Text="Submit" 
-			Clicked="Handle_SubmitClicked"/>
-
-		<Button Text="Take Picture" 
-			Clicked="Handle_OpenCameraClicked"/>
-
-		<Button Text="Picture Details" 
-			Clicked="Handle_ScoreModalClicked"/>
-
-
+		<StackLayout Orientation="Horizontal">
+			<Frame HorizontalOptions="Start">
+				<StackLayout>
+					<Label x:Name="progressLabel" Text="Progress: 3 / 10 Items" />
+					<Label x:Name="pointsLabel" Text="Points: 7 / 20" />
+					<Label x:Name="timeLeftLabel" Text="Time Left: 07:12" />
+				</StackLayout>
+			</Frame>
+			<Button x:Name="submitButton" Text="Submit" HorizontalOptions="FillAndExpand" Clicked="Handle_SubmitClicked" BackgroundColor="Accent" WidthRequest="100" />
+		</StackLayout>
+		<StackLayout>
+			<ListView x:Name="ListView" HasUnevenRows="true" ItemsSource="{Binding ItemsToCollect}" VerticalOptions="CenterAndExpand" ItemSelected="Handle_ItemSelected">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+								<StackLayout Orientation="Vertical">
+									<Label Text="{Binding Title}" />
+									<Label Text="{Binding Description}" FontSize="14" FontAttributes="Italic" />
+								</StackLayout>
+								<Frame BackgroundColor="Red" HorizontalOptions="EndAndExpand">
+									<Image Source="{Binding Photo.Source}" WidthRequest="30" HeightRequest="30" Aspect="AspectFill" />
+									<Frame.GestureRecognizers>
+										<TapGestureRecognizer Tapped="Handle_ModalTapped" />
+									</Frame.GestureRecognizers>
+								</Frame>
+								<Frame BackgroundColor="Blue" HorizontalOptions="End">
+									<Image Source="{Binding TakePhotoIcon.Source}" WidthRequest="30" HeightRequest="30" Aspect="AspectFill" />
+									<Frame.GestureRecognizers>
+										<TapGestureRecognizer Tapped="Handle_TakePhotoTapped" />
+									</Frame.GestureRecognizers>
+								</Frame>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
 	</StackLayout>
 </ContentPage>
