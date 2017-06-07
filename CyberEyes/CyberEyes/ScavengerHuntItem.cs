@@ -10,7 +10,7 @@ namespace CyberEyes
 		public Image TakePhotoIcon { get; }
 		public Image Photo { get; set; }
 		public int Points { get; set; }
-		public int PointsMax { get; set;}
+		public int PointsMax { get; set; }
 
 		public ScavengerHuntItem()
 		{

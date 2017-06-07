@@ -1,21 +1,24 @@
-﻿<Properties StartupConfiguration="{BA53BEE5-0345-4BC8-B6D4-E3FED6DA76A6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CyberEyes/GamePage.xaml">
+﻿<Properties StartupConfiguration="{12DB4CA9-B2E1-44EA-B1EE-7B262663C5D0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="packages/Xam.Plugin.Media.2.6.2/readme.txt">
     <Files>
-      <File FileName="CyberEyes/ScoreModalPage.xaml" Line="24" Column="31" />
-      <File FileName="CyberEyes/ScoreModalPage.xaml.cs" Line="18" Column="5" />
-      <File FileName="CyberEyes/PopupClass.cs" Line="42" Column="15" />
-      <File FileName="CyberEyes/EndScreenPage.xaml" Line="26" Column="30" />
-      <File FileName="CyberEyes/EndScreenPage.xaml.cs" Line="21" Column="2" />
-      <File FileName="CyberEyes/GamePage.xaml.cs" Line="1" Column="1" />
+      <File FileName="CyberEyes/App.xaml.cs" Line="11" Column="26" />
+      <File FileName="CyberEyes/TakePhotoPage.xaml" Line="1" Column="1" />
+      <File FileName="CyberEyes/TakePhotoPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="CyberEyes/ConfirmPhotoPage.xaml" Line="1" Column="1" />
+      <File FileName="CyberEyes/ConfirmPhotoPage.xaml.cs" Line="20" Column="4" />
+      <File FileName="CyberEyes/MainScreenPage.xaml" Line="1" Column="1" />
       <File FileName="CyberEyes/GamePage.xaml" Line="1" Column="1" />
+      <File FileName="CyberEyes/ScavengerHuntItem.cs" Line="15" Column="29" />
+      <File FileName="CyberEyes/GamePage.xaml.cs" Line="28" Column="5" />
+      <File FileName="packages/Xam.Plugin.Media.2.6.2/readme.txt" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.CyberEyes.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.ED74674B-C04B-4DA5-A89C-B1CB729EA00E" />
+  <MonoDevelop.Ide.ItemProperties.CyberEyes.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.35D25494-67E5-4344-BEEF-EC776C3478D1" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.CyberEyes.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.CyberEyes.Droid PreferredExecutionTarget="Android.Test_Device_Nexus5" />
   <MultiItemStartupConfigurations />
 </Properties>
