@@ -1,16 +1,8 @@
 ﻿<Properties StartupConfiguration="{12DB4CA9-B2E1-44EA-B1EE-7B262663C5D0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="packages/Xam.Plugin.Media.2.6.2/readme.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CyberEyes/ViewModelBase.cs">
     <Files>
-      <File FileName="CyberEyes/App.xaml.cs" Line="11" Column="26" />
-      <File FileName="CyberEyes/TakePhotoPage.xaml" Line="1" Column="1" />
-      <File FileName="CyberEyes/TakePhotoPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="CyberEyes/ConfirmPhotoPage.xaml" Line="1" Column="1" />
-      <File FileName="CyberEyes/ConfirmPhotoPage.xaml.cs" Line="20" Column="4" />
-      <File FileName="CyberEyes/MainScreenPage.xaml" Line="1" Column="1" />
-      <File FileName="CyberEyes/GamePage.xaml" Line="1" Column="1" />
       <File FileName="CyberEyes/ScavengerHuntItem.cs" Line="15" Column="29" />
-      <File FileName="CyberEyes/GamePage.xaml.cs" Line="28" Column="5" />
-      <File FileName="packages/Xam.Plugin.Media.2.6.2/readme.txt" Line="1" Column="1" />
+      <File FileName="CyberEyes/ViewModelBase.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.CyberEyes.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.35D25494-67E5-4344-BEEF-EC776C3478D1" />
