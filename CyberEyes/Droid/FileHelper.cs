@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace CyberEyes.Droid
 {
-	public class FileHelper
+	public class FileHelper : IFileHelper
 	{
 		public bool Exists(string filename)
 		{
