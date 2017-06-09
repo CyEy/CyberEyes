@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{12DB4CA9-B2E1-44EA-B1EE-7B262663C5D0}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="iOS/FileHelper.cs">
     <Files>
-      <File FileName="CyberEyes/ScavengerHuntItem.cs" Line="26" Column="3" />
+      <File FileName="CyberEyes/ScavengerHuntItem.cs" Line="1" Column="1" />
       <File FileName="CyberEyes/ViewModelBase.cs" Line="11" Column="4" />
       <File FileName="CyberEyes/ScavengerHuntList.cs" Line="13" Column="25" />
-      <File FileName="CyberEyes/ScavengerHuntManager.cs" Line="8" Column="4" />
+      <File FileName="CyberEyes/ScavengerHuntManager.cs" Line="8" Column="1" />
       <File FileName="CyberEyes/FileHelper.cs" Line="45" Column="3" />
-      <File FileName="CyberEyes/IFileHelper.cs" Line="4" Column="2" />
+      <File FileName="CyberEyes/IFileHelper.cs" Line="4" Column="1" />
       <File FileName="Droid/FileHelper.cs" Line="19" Column="4" />
       <File FileName="iOS/FileHelper.cs" Line="1" Column="1" />
     </Files>

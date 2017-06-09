@@ -7,11 +7,13 @@ namespace CyberEyes
 {
 	public class ScavengerHuntItem : ViewModelBase
 	{
+		// FileHelper fileHelper = new FileHelper(); // handles FileIO per platform
+
 		private string title;
 		private string description;
 		private Image takePhotoIcon;
 		private Image photo;
-		private string photoPathWithFilename;
+		private string photoFilename;
 		private int points;
 		private int pointsMax;
 
@@ -24,7 +26,23 @@ namespace CyberEyes
 		[XmlIgnore]
 		public Image Photo { get { return this.photo; } set { SetProperty(ref this.photo, value); } }
 
-		public string PhotoPathWithFilename { get { return this.photoPathWithFilename; } set { SetProperty(ref this.photoPathWithFilename, value); }  } // todo: update Photo when path updates
+		public string PhotoFilename
+		{
+			get
+			{
+				return this.photoFilename;
+			}
+			set
+			{
+				SetProperty(ref this.photoFilename, value);
+
+				Photo.Source = ImageSource.FromFile(Device.OnPlatform(iOS: "Images/" + value,
+				                                                      Android: value,
+				                                                      WinPhone: ""));
+				
+			}
+		} 
+
 		public int Points { get { return this.points; } set { SetProperty(ref this.points, value); } }
 		public int PointsMax { get { return this.pointsMax; } set { SetProperty(ref this.pointsMax, value); } }
 
