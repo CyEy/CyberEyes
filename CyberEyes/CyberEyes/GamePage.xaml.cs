@@ -47,7 +47,7 @@ namespace CyberEyes
 
 		void Handle_OpenCameraClicked(object sender, System.EventArgs e)
 		{
-			Navigation.PushAsync(new TakePhotoPage(), true);
+			Navigation.PushModalAsync(new TakePhotoPage(ItemsToCollect[0]), true);
 		}
 
 		void Handle_ScoreModalClicked(object sender, System.EventArgs e)
