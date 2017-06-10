@@ -89,6 +89,11 @@
     <Compile Include="Enumerations.cs" />
     <Compile Include="ScavengerHuntItem.cs" />
     <Compile Include="PopupClass.cs" />
+    <Compile Include="ViewModelBase.cs" />
+    <Compile Include="ScavengerHuntList.cs" />
+    <Compile Include="ScavengerHuntManager.cs" />
+    <Compile Include="FileHelper.cs" />
+    <Compile Include="IFileHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
