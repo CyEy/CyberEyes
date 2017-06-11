@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
+using Foundation;
+using CoreFoundation;
+using UIKit;
+using ImageIO;
 
 [assembly: Dependency(typeof(CyberEyes.iOS.FileHelper))]
 
@@ -28,6 +33,50 @@ namespace CyberEyes.iOS
 			return File.ReadAllText(filepath);
 		}
 
+		public void WriteImage(string filename, Image image)
+		{
+			/*
+			string filepath = GetFilePath(filename);
+			var documentsDirectory = Environment.GetFolderPath
+						 (Environment.SpecialFolder.Personal);
+			string jpgFilename = System.IO.Path.Combine(documentsDirectory, "Photo.jpg"); // hardcoded filename, overwritten each time
+
+			File.WriteAllText(filepath, text);
+
+			MemoryStream ms = new MemoryStream();
+			image.Source.
+			File.WriteAllBytes(filename, );
+			*/
+			/*
+			var imgSrc = image.Source;
+			var renderer = new StreamImagesourceHandler();
+			var photo = renderer.LoadImageAsync(imgSrc);
+			var documentsDirectory = Environment.GetFolderPath
+				(Environment.SpecialFolder.Personal);
+			string jpgFilename = System.IO.Path.Combine(
+			documentsDirectory, filename);
+			NSData imgData = photo.AsJPEG();
+
+			NSError err = null;
+			if (imgData.Save(jpgFilename, false, out err))
+			{
+				Console.WriteLine("saved as " + jpgFilename);
+			}
+			else
+			{
+				Console.WriteLine("NOT saved as " + jpgFilename +
+		" because" + err.LocalizedDescription);
+			}
+*/
+
+		}
+		/*
+		public Image ReadImage(string filename)
+		{
+			string filepath = GetFilePath(filename);
+			// return File.ReadAllText(filepath);
+		}
+*/
 		public IEnumerable<string> GetFiles()
 		{
 			return Directory.GetFiles(GetDocsPath());

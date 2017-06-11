@@ -41,6 +41,29 @@ namespace CyberEyes
 				XmlSerializer xml = new XmlSerializer(typeof(ScavengerHuntList));
 
 				this.itemList = xml.Deserialize(tr) as ScavengerHuntList;
+
+				for (int i = 0; i < this.itemList.Items.Count; i++)
+				{
+
+					string stringContents = this.itemList.Items[i].Base64StringContents;
+
+					if (!String.IsNullOrEmpty(stringContents))
+					{
+						var bytes = Convert.FromBase64String(stringContents);
+
+						this.itemList.Items[i].Photo.Source = ImageSource.FromStream(() =>
+						{
+							Stream stream = new MemoryStream(bytes);
+							return stream;
+						});
+					}
+
+					/*
+					var filename = this.itemList.Items[i].PhotoFilename;
+					this.itemList.Items[i].Photo.Source = ImageSource.FromFile(Device.OnPlatform(iOS: "Images/" + filename,
+																	  Android: filename,
+				                                                      WinPhone: "")); */
+				}
 			}
 		}
 

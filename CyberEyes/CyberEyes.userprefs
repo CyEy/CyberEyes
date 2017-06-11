@@ -1,10 +1,16 @@
-﻿<Properties StartupConfiguration="{BA53BEE5-0345-4BC8-B6D4-E3FED6DA76A6}|Default">
+﻿<Properties StartupConfiguration="{BA53BEE5-0345-4BC8-B6D4-E3FED6DA76A6}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench ActiveDocument="CyberEyes/TakePhotoPage.xaml.cs">
     <Files>
-      <File FileName="CyberEyes/ScavengerHuntItem.cs" Line="27" Column="1" />
-      <File FileName="CyberEyes/ScavengerHuntManager.cs" Line="41" Column="4" />
-      <File FileName="CyberEyes/TakePhotoPage.xaml" Line="2" Column="117" />
-      <File FileName="CyberEyes/TakePhotoPage.xaml.cs" Line="17" Column="36" />
+      <File FileName="CyberEyes/ScavengerHuntItem.cs" Line="43" Column="1" />
+      <File FileName="CyberEyes/ScavengerHuntManager.cs" Line="54" Column="4" />
+      <File FileName="CyberEyes/TakePhotoPage.xaml" Line="21" Column="36" />
+      <File FileName="CyberEyes/TakePhotoPage.xaml.cs" Line="34" Column="51" />
+      <File FileName="CyberEyes/GamePage.xaml.cs" Line="38" Column="1" />
+      <File FileName="CyberEyes/App.xaml.cs" Line="30" Column="1" />
+      <File FileName="Droid/FileHelper.cs" Line="28" Column="4" />
+      <File FileName="CyberEyes/IFileHelper.cs" Line="19" Column="34" />
+      <File FileName="CyberEyes/FileHelper.cs" Line="37" Column="31" />
+      <File FileName="iOS/FileHelper.cs" Line="41" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.CyberEyes.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.35D25494-67E5-4344-BEEF-EC776C3478D1" />
@@ -13,10 +19,8 @@
     <BreakpointStore>
       <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/App.xaml.cs" relfile="CyberEyes/App.xaml.cs" line="30" column="1" />
       <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/ScavengerHuntManager.cs" relfile="CyberEyes/ScavengerHuntManager.cs" line="32" column="1" />
-      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/ScavengerHuntManager.cs" relfile="CyberEyes/ScavengerHuntManager.cs" line="50" column="1" />
-      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/ScavengerHuntItem.cs" relfile="CyberEyes/ScavengerHuntItem.cs" line="33" column="1" />
-      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/ScavengerHuntItem.cs" relfile="CyberEyes/ScavengerHuntItem.cs" line="27" column="1" />
-      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/ScavengerHuntItem.cs" relfile="CyberEyes/ScavengerHuntItem.cs" line="39" column="1" />
+      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/ScavengerHuntManager.cs" relfile="CyberEyes/ScavengerHuntManager.cs" line="59" column="1" />
+      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/ScavengerHuntManager.cs" relfile="CyberEyes/ScavengerHuntManager.cs" line="43" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

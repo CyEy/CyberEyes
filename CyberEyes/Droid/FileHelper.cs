@@ -19,14 +19,13 @@ namespace CyberEyes.Droid
 		{
 			string filepath = GetFilePath(filename);
 			File.WriteAllText(filepath, text);
-
-			 ImageSource.FromFile(filename);
 		}
 
 		public string ReadText(string filename)
 		{
 			string filepath = GetFilePath(filename);
 			return File.ReadAllText(filepath);
+
 		}
 
 		public IEnumerable<string> GetFiles()

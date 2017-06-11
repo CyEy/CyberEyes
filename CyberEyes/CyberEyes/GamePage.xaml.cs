@@ -28,6 +28,12 @@ namespace CyberEyes
 				appData.ItemList.Items.Add(newItem);
 			}
 
+			// ensure everything has a filename too
+			for (int i = 0; i < appData.ItemList.Items.Count; i++)
+			{
+				appData.ItemList.Items[i].PhotoFilename = $"image_{i}.jpg";
+			}
+
 			// ListView.ItemsSource = ItemsToCollect;
 		}
 
