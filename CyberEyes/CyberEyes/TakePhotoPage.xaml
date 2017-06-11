@@ -13,13 +13,22 @@
 				      </OnPlatform.WinPhone>
 		</OnPlatform>
 	</ContentPage.Padding>
-	<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
-		<Label FontSize="24" Text="Take Photo of: [item name]" HorizontalOptions="CenterAndExpand" />
-		<Frame BackgroundColor="Black">
-			<Frame BackgroundColor="White">
-				<Image x:Name="CameraDisplay" />
+	<ScrollView>
+		<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+			<Label FontSize="24" Text="Take Photo of: [item name]" HorizontalOptions="CenterAndExpand" />
+			<Frame BackgroundColor="Black">
+				<Frame BackgroundColor="White">
+					<Image x:Name="CameraDisplay" Source="{Binding Photo.Source}" />
+				</Frame>
 			</Frame>
-		</Frame>
-		<Button Text="Take Photo" Clicked="Handle_TakeClicked" />
-	</StackLayout>
+			<Button x:Name="TakePhoto" Text="Take Photo" />
+			<Button Text="Return" Clicked="Handle_ReturnClicked" />
+			<!-- Test Photos -->
+			<BoxView HeightRequest="1" WidthRequest="200" BackgroundColor="Red" />
+			<Label Text="Test Items" HorizontalOptions="Center" />
+			<Button Text="Take Photo of Apple" Clicked="Handle_AppleClicked" />
+			<Button Text="Take Photo of Bird" Clicked="Handle_BirdClicked" />
+			<Button Text="Take Photo of Pen" Clicked="Handle_PenClicked" />
+		</StackLayout>
+	</ScrollView>
 </ContentPage>
