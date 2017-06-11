@@ -25,18 +25,7 @@ namespace CyberEyes
 		{
 			return fileHelper.ReadText(filename);
 		}
-		/*
-		public void WriteImage(string filename, Image image)
-		{
 
-			fileHelper.WriteImage(filename, image);
-		}
-
-		public Image ReadImage(string filename)
-		{
-			return fileHelper.ReadImage(filename);
-		}
-*/
 		public IEnumerable<string> GetFiles()
 		{
 			IEnumerable<string> filepaths = fileHelper.GetFiles();

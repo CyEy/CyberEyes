@@ -37,11 +37,6 @@ namespace CyberEyes
 			set
 			{
 				SetProperty(ref this.photoFilename, value);
-				/*
-				Photo.Source = ImageSource.FromFile(Device.OnPlatform(iOS: "Images/" + value,
-				                                                      Android: value,
-				                                                      WinPhone: ""));
-				*/
 			}
 		}
 

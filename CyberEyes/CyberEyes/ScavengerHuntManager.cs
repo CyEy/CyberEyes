@@ -57,12 +57,6 @@ namespace CyberEyes
 							return stream;
 						});
 					}
-
-					/*
-					var filename = this.itemList.Items[i].PhotoFilename;
-					this.itemList.Items[i].Photo.Source = ImageSource.FromFile(Device.OnPlatform(iOS: "Images/" + filename,
-																	  Android: filename,
-				                                                      WinPhone: "")); */
 				}
 			}
 		}

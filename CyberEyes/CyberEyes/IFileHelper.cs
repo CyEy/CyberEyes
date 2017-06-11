@@ -12,10 +12,6 @@ namespace CyberEyes
 
 		string ReadText(string filename);
 
-		// void WriteImage(string filename, Image image);
-
-		// Image ReadImage(string filename);
-
 		IEnumerable<string> GetFiles();
 
 		void Delete(string filename);
