@@ -26,7 +26,7 @@
 			<Button x:Name="submitButton" Text="Submit" HorizontalOptions="FillAndExpand" Clicked="Handle_SubmitClicked" BackgroundColor="Accent" WidthRequest="100" />
 		</StackLayout>
 		<StackLayout>
-			<ListView x:Name="ListView" HasUnevenRows="true" ItemsSource="{Binding ItemsToCollect}" VerticalOptions="CenterAndExpand" ItemSelected="Handle_ItemSelected">
+			<ListView x:Name="ListView" HasUnevenRows="true" ItemsSource="{Binding ItemsToCollect}" VerticalOptions="CenterAndExpand">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<ViewCell>
@@ -35,6 +35,10 @@
 									<Label Text="{Binding Title}" />
 									<Label Text="{Binding Description}" FontSize="14" FontAttributes="Italic" />
 								</StackLayout>
+								<Frame BackgroundColor="Red" HorizontalOptions="EndAndExpand">
+									<Image Source="{Binding Photo.Source}" WidthRequest="30" HeightRequest="30" Aspect="AspectFill" />
+								</Frame>
+								<!--
 								<Frame BackgroundColor="Red" HorizontalOptions="EndAndExpand">
 									<Image Source="{Binding Photo.Source}" WidthRequest="30" HeightRequest="30" Aspect="AspectFill" />
 									<Frame.GestureRecognizers>
@@ -47,11 +51,15 @@
 										<TapGestureRecognizer Tapped="Handle_TakePhotoTapped" />
 									</Frame.GestureRecognizers>
 								</Frame>
+								-->
 							</StackLayout>
 						</ViewCell>
 					</DataTemplate>
 				</ListView.ItemTemplate>
 			</ListView>
+
+			<Button x:Name="Details" Text="Item Details" Clicked="Handle_ItemDetailsClicked"/>
+			<Button x:Name="TakePhoto" Text="Take Photo" BackgroundColor="Accent" Clicked="Handle_TakePhotoClicked"/>
 		</StackLayout>
 	</StackLayout>
 </ContentPage>

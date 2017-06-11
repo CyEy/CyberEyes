@@ -1,14 +1,16 @@
-﻿<Properties StartupConfiguration="{12DB4CA9-B2E1-44EA-B1EE-7B262663C5D0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CyberEyes/TakePhotoPage.xaml.cs">
+﻿<Properties StartupConfiguration="{BA53BEE5-0345-4BC8-B6D4-E3FED6DA76A6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CyberEyes/ScoreModalPage.xaml.cs">
     <Files>
-      <File FileName="CyberEyes/TakePhotoPage.xaml" Line="22" Column="11" />
-      <File FileName="CyberEyes/TakePhotoPage.xaml.cs" Line="85" Column="1" />
+      <File FileName="CyberEyes/TakePhotoPage.xaml" Line="11" Column="25" />
+      <File FileName="CyberEyes/TakePhotoPage.xaml.cs" Line="81" Column="42" />
       <File FileName="CyberEyes/MainScreenPage.xaml" Line="1" Column="1" />
-      <File FileName="CyberEyes/GamePage.xaml" Line="1" Column="1" />
-      <File FileName="CyberEyes/GamePage.xaml.cs" Line="5" Column="1" />
+      <File FileName="CyberEyes/GamePage.xaml" Line="31" Column="20" />
+      <File FileName="CyberEyes/GamePage.xaml.cs" Line="75" Column="56" />
       <File FileName="CyberEyes/App.xaml.cs" Line="12" Column="1" />
       <File FileName="CyberEyes/ScavengerHuntManager.cs" Line="32" Column="1" />
       <File FileName="CyberEyes/App.xaml" Line="1" Column="1" />
+      <File FileName="CyberEyes/ScoreModalPage.xaml.cs" Line="19" Column="86" />
+      <File FileName="CyberEyes/ScoreModalPage.xaml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.CyberEyes.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.35D25494-67E5-4344-BEEF-EC776C3478D1" />

@@ -84,7 +84,7 @@ namespace CyberEyes
 
 		void Handle_ReturnClicked(object sender, System.EventArgs e)
 		{
-			Navigation.PopAsync();
+			Navigation.PopModalAsync();
 		}
 	}
 }

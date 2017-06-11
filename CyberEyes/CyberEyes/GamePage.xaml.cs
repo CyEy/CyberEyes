@@ -54,10 +54,26 @@ namespace CyberEyes
 		{
 			Navigation.PushModalAsync(new ScoreModalPage(), true);
 		}
-
+		/*
 		void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 		{
 			ListView.SelectedItem = null;
+		}
+*/
+		void Handle_ItemDetailsClicked(object sender, System.EventArgs e)
+		{
+			if (ListView.SelectedItem != null) {
+				var selectedItem = ListView.SelectedItem as ScavengerHuntItem;
+				Navigation.PushModalAsync(new ScoreModalPage(selectedItem), true);
+			}
+		}
+
+		void Handle_TakePhotoClicked(object sender, System.EventArgs e)
+		{
+				if (ListView.SelectedItem != null) {
+				var selectedItem = ListView.SelectedItem as ScavengerHuntItem;
+				Navigation.PushModalAsync(new TakePhotoPage(selectedItem), true);
+			}
 		}
 	}
 }
