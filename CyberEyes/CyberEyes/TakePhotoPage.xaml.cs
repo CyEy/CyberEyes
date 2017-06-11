@@ -58,6 +58,7 @@ namespace CyberEyes
 		public TakePhotoPage(ScavengerHuntItem selectedItem) : this()
 		{
 			this.item = selectedItem;
+			this.BindingContext = this.item;
 		}
 
 		void Handle_AppleClicked(object sender, System.EventArgs e)

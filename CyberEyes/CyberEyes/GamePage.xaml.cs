@@ -7,14 +7,15 @@ namespace CyberEyes
 {
 	public partial class GamePage : ContentPage
 	{
-		public List<ScavengerHuntItem> ItemsToCollect = new List<ScavengerHuntItem>();
+		// public List<ScavengerHuntItem> ItemsToCollect = new List<ScavengerHuntItem>();
 
 		public GamePage()
 		{
 			InitializeComponent();
+			var appData = (ScavengerHuntManager)BindingContext;
 
-			// generate some dummy items to display
-			for (int i = 0; i < 10; i++)
+			// generate some dummy items to display (if less than 10 present)
+			for (int i = Math.Max(appData.ItemList.Items.Count - 1, 0); i < 10; i++)
 			{
 				var newItem = new ScavengerHuntItem()
 				{
@@ -24,10 +25,10 @@ namespace CyberEyes
 					PointsMax = 3
 				};
 
-				ItemsToCollect.Add(newItem);
+				appData.ItemList.Items.Add(newItem);
 			}
 
-			ListView.ItemsSource = ItemsToCollect;
+			// ListView.ItemsSource = ItemsToCollect;
 		}
 
 		void Handle_ModalTapped(object sender, System.EventArgs e)
@@ -44,7 +45,7 @@ namespace CyberEyes
 		{
 			Navigation.PushAsync(new EndScreenPage(), true);
 		}
-
+		/*
 		void Handle_OpenCameraClicked(object sender, System.EventArgs e)
 		{
 			Navigation.PushModalAsync(new TakePhotoPage(ItemsToCollect[0]), true);
@@ -54,6 +55,7 @@ namespace CyberEyes
 		{
 			Navigation.PushModalAsync(new ScoreModalPage(), true);
 		}
+		*/
 		/*
 		void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 		{
@@ -62,7 +64,8 @@ namespace CyberEyes
 */
 		void Handle_ItemDetailsClicked(object sender, System.EventArgs e)
 		{
-			if (ListView.SelectedItem != null) {
+			if (ListView.SelectedItem != null)
+			{
 				var selectedItem = ListView.SelectedItem as ScavengerHuntItem;
 				Navigation.PushModalAsync(new ScoreModalPage(selectedItem), true);
 			}
@@ -70,7 +73,8 @@ namespace CyberEyes
 
 		void Handle_TakePhotoClicked(object sender, System.EventArgs e)
 		{
-				if (ListView.SelectedItem != null) {
+			if (ListView.SelectedItem != null)
+			{
 				var selectedItem = ListView.SelectedItem as ScavengerHuntItem;
 				Navigation.PushModalAsync(new TakePhotoPage(selectedItem), true);
 			}
