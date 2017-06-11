@@ -14,13 +14,13 @@ namespace CyberEyes
 		{
 			InitializeComponent();
 			this.item = new ScavengerHuntItem();
-            this.BindingContext = this.item;
+			this.BindingContext = this.item;
 
 			// filler item
 			this.item.Photo.Source = ImageSource.FromResource("CyberEyes.Images.blank_camera.png");
 
 			// based on example from here: https://github.com/jamesmontemagno/MediaPlugin
-			TakePhoto.Clicked += async(sender, args) =>
+			TakePhoto.Clicked += async (sender, args) =>
 			{
 				await CrossMedia.Current.Initialize();
 
@@ -60,6 +60,20 @@ namespace CyberEyes
 			this.item = selectedItem;
 		}
 
+		void Handle_AppleClicked(object sender, System.EventArgs e)
+		{
+			this.item.Photo.Source = ImageSource.FromResource("CyberEyes.Images.apple.jpg");
+		}
+
+		void Handle_BirdClicked(object sender, System.EventArgs e)
+		{
+			this.item.Photo.Source = ImageSource.FromResource("CyberEyes.Images.bird.jpg");
+		}
+
+		void Handle_PenClicked(object sender, System.EventArgs e)
+		{
+			this.item.Photo.Source = ImageSource.FromResource("CyberEyes.Images.pen.jpg");
+		}
 
 		/*
 		void Handle_TakeClicked(object sender, System.EventArgs e)

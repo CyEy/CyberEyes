@@ -55,6 +55,9 @@
     <EmbeddedResource Include="Images\blank_photo_icon.png" />
     <EmbeddedResource Include="Images\camera_icon.png" />
     <EmbeddedResource Include="Images\finalImage.jpg" />
+    <EmbeddedResource Include="Images\apple.jpg" />
+    <EmbeddedResource Include="Images\bird.jpg" />
+    <EmbeddedResource Include="Images\pen.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
