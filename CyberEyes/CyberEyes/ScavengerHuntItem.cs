@@ -14,8 +14,10 @@ namespace CyberEyes
 		private Image takePhotoIcon;
 		private Image photo;
 		private string photoFilename;
+		private string base64StringContents;
 		private int points;
 		private int pointsMax;
+
 
 		public string Title { get { return this.title; } set { SetProperty(ref this.title, value); } }
 		public string Description { get { return this.description; } set { SetProperty(ref this.description, value); } }
@@ -35,13 +37,20 @@ namespace CyberEyes
 			set
 			{
 				SetProperty(ref this.photoFilename, value);
-
-				Photo.Source = ImageSource.FromFile(Device.OnPlatform(iOS: "Images/" + value,
-				                                                      Android: value,
-				                                                      WinPhone: ""));
-				
 			}
-		} 
+		}
+
+		public string Base64StringContents
+		{
+			get
+			{
+				return this.base64StringContents;
+			}
+			set
+			{
+				SetProperty(ref this.base64StringContents, value);
+			}
+		}
 
 		public int Points { get { return this.points; } set { SetProperty(ref this.points, value); } }
 		public int PointsMax { get { return this.pointsMax; } set { SetProperty(ref this.pointsMax, value); } }

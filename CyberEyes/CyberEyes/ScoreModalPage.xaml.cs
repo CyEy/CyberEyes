@@ -8,11 +8,15 @@ namespace CyberEyes
 {
 	public partial class ScoreModalPage : ContentPage
 	{
+		ScavengerHuntItem item;
+		
 		public ScoreModalPage()
 		{
 			InitializeComponent();
 			////Image img = new Image { };
 
+			item = new ScavengerHuntItem();
+			item.Photo.Source = ImageSource.FromResource("CyberEyes.Images.blank_camera.png");
 			itemPhoto.Source = ImageSource.FromResource("CyberEyes.Images.blank_camera.png");
 
 			//var button = new Button
@@ -66,6 +70,11 @@ namespace CyberEyes
 			//				popup.DismissPopup();
 			//			};
 
+		}
+
+		public ScoreModalPage(ScavengerHuntItem newItem) : this ()
+		{
+			this.item = newItem;
 		}
 
 		void Handle_Clicked(object sender, System.EventArgs e)

@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
+using Foundation;
+using CoreFoundation;
+using UIKit;
+using ImageIO;
 
 [assembly: Dependency(typeof(CyberEyes.iOS.FileHelper))]
 

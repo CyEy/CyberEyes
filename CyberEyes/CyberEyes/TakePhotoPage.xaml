@@ -15,7 +15,8 @@
 	</ContentPage.Padding>
 	<ScrollView>
 		<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
-			<Label FontSize="24" Text="Take Photo of: [item name]" HorizontalOptions="CenterAndExpand" />
+			<Label FontSize="24" Text="Take Photo of:" HorizontalOptions="CenterAndExpand" />
+			<Label Text="{Binding Title}" HorizontalOptions="CenterAndExpand" />
 			<Frame BackgroundColor="Black">
 				<Frame BackgroundColor="White">
 					<Image x:Name="CameraDisplay" Source="{Binding Photo.Source}" />
