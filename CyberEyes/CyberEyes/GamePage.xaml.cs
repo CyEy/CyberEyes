@@ -11,9 +11,13 @@ namespace CyberEyes
 
 		// public List<ScavengerHuntItem> ItemsToCollect = new List<ScavengerHuntItem>();
 
-		public GamePage(Config config)
+		public GamePage()
 		{
-			InitializeComponent();
+            InitializeComponent();
+		}
+
+		public GamePage(Config config) : this()
+		{
 			this.config = config;
 			var appData = (ScavengerHuntManager)BindingContext;
 

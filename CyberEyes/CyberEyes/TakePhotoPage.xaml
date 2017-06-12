@@ -17,6 +17,7 @@
 		<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
 			<Label FontSize="24" Text="Take Photo of:" HorizontalOptions="CenterAndExpand" />
 			<Label Text="{Binding Title}" HorizontalOptions="CenterAndExpand" />
+			<Label x:Name="ResultsLabel" TextColor="Accent" HorizontalOptions="CenterAndExpand" />
 			<Frame BackgroundColor="Black">
 				<Frame BackgroundColor="White">
 					<Image x:Name="CameraDisplay" Source="{Binding Photo.Source}" />

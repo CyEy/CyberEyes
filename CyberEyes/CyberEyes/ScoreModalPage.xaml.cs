@@ -21,17 +21,23 @@ namespace CyberEyes
 
 		//}
 
-		public ScoreModalPage(ScavengerHuntItem newItem)
+		public ScoreModalPage()
+		{
+            InitializeComponent();
+		}
+
+		public ScoreModalPage(ScavengerHuntItem newItem) : this ()
 		{
 			//ScavengerHuntItem item = new ScavengerHuntItem();
 			//item.Points = newItem.Points;
 			//item.Title = newItem.Title;
 			//item.Points = newItem.Points;
-			string title = newItem.Title;
+			// string title = newItem.Title;
 
 			this.item = newItem;
 
-			modalLabel.Text = title;
+			modalLabel.Text = this.item.Title;
+			itemPhoto.Source = this.item.Photo.Source;
 			itemMatch.Text = String.Format("Match Confidence: {0}", newItem.Points);
 			otherItem1.Text = String.Format("{0}: {1}", newItem.OtherItem1, newItem.OtherItem1Match);
 			otherItem2.Text = String.Format("{0}: {1}", newItem.OtherItem2, newItem.OtherItem2Match);
