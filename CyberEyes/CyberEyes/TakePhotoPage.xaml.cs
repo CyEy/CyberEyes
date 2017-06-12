@@ -112,12 +112,14 @@ namespace CyberEyes
 					this.item.Title = res.responses[0].labelAnnotations[a].description;
 					this.item.Points = (int)(res.responses[0].labelAnnotations[a].score * 100);
 					matched = true;
+					ResultsLabel.Text = $"Matched '{this.item.Title}' at {this.item.Points}%";
+					break;
 				}
 			}
 
 			if (!matched)
 			{
-				this.item.Title = "Not a match :(";
+				ResultsLabel.Text = "Not a match :(";
 				this.item.Points = 0;
 			}
 
