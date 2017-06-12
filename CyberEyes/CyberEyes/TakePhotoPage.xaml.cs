@@ -75,11 +75,14 @@ namespace CyberEyes
 		void ClassifyImage()
 		{
 			string Url = "https://vision.googleapis.com/v1/images:annotate?key=";
+			try
+			{
 
-			HttpClient _client = new HttpClient();
 
-			RootObject req = new RootObject();
-			req.requests = new List<Request> {
+				HttpClient _client = new HttpClient();
+
+				RootObject req = new RootObject();
+				req.requests = new List<Request> {
 					new Request {
 						image = new RImage {
 							content = this.item.Base64StringContents
@@ -93,46 +96,50 @@ namespace CyberEyes
 					},
 				};
 
-			var content = JsonConvert.SerializeObject(req);
+				var content = JsonConvert.SerializeObject(req);
 
-			var reply = _client.PostAsync(Url, new StringContent(content));
-			var replyRes = reply.Result.Content.ReadAsStringAsync();
+				var reply = _client.PostAsync(Url, new StringContent(content));
+				var replyRes = reply.Result.Content.ReadAsStringAsync();
 
-			var res = JsonConvert.DeserializeObject<RRootObject>(replyRes.Result);
+				var res = JsonConvert.DeserializeObject<RRootObject>(replyRes.Result);
 
 
-			this.item.PointsMax = 100;
+				this.item.PointsMax = 100;
 
-			bool matched = false;
-			this.item.OtherItem1 = String.Empty;
-			this.item.OtherItem2 = String.Empty;
+				bool matched = false;
+				this.item.OtherItem1 = String.Empty;
+				this.item.OtherItem2 = String.Empty;
 
-			for (int a = 0; a < Math.Min(res.responses[0].labelAnnotations.Count, 5); a = a + 1)
-			{
-				if (res.responses[0].labelAnnotations[a].description.Contains(this.item.Title) && !matched)
+				for (int a = 0; a < Math.Min(res.responses[0].labelAnnotations.Count, 5); a = a + 1)
 				{
-					this.item.Points = (int)(res.responses[0].labelAnnotations[a].score * 100);
-					matched = true;
-					ResultsLabel.Text = $"Matched '{res.responses[0].labelAnnotations[a].description}' at {this.item.Points}%";
+					if (res.responses[0].labelAnnotations[a].description.Contains(this.item.Title) && !matched)
+					{
+						this.item.Points = (int)(res.responses[0].labelAnnotations[a].score * 100);
+						matched = true;
+						ResultsLabel.Text = $"Matched '{res.responses[0].labelAnnotations[a].description}' at {this.item.Points}%";
+					}
+					else if (String.IsNullOrEmpty(this.item.OtherItem1))
+					{
+						this.item.OtherItem1 = res.responses[0].labelAnnotations[a].description;
+						this.item.OtherItem1Match = (int)(res.responses[0].labelAnnotations[a].score * 100);
+					}
+					else if (String.IsNullOrEmpty(this.item.OtherItem2))
+					{
+						this.item.OtherItem2 = res.responses[0].labelAnnotations[a].description;
+						this.item.OtherItem2Match = (int)(res.responses[0].labelAnnotations[a].score * 100);
+					}
 				}
-				else if (String.IsNullOrEmpty(this.item.OtherItem1))
+
+				if (!matched)
 				{
-					this.item.OtherItem1 = res.responses[0].labelAnnotations[a].description;
-					this.item.OtherItem1Match = (int)(res.responses[0].labelAnnotations[a].score * 100);
-				}
-				else if (String.IsNullOrEmpty(this.item.OtherItem2))
-				{
-					this.item.OtherItem2 = res.responses[0].labelAnnotations[a].description;
-					this.item.OtherItem2Match = (int)(res.responses[0].labelAnnotations[a].score * 100);
+					ResultsLabel.Text = "Not a match :(";
+					this.item.Points = 0;
 				}
 			}
-
-			if (!matched)
+			catch (Exception)
 			{
-				ResultsLabel.Text = "Not a match :(";
-				this.item.Points = 0;
+				DisplayAlert("Vision API Problem", "Error contacting Vision API. Please try again Later", "OK");
 			}
-
 		}
 
 		public TakePhotoPage(ScavengerHuntItem selectedItem) : this()
