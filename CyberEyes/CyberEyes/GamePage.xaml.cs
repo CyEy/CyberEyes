@@ -13,15 +13,14 @@ namespace CyberEyes
 
 		public GamePage()
 		{
-            InitializeComponent();
+			InitializeComponent();
+            this.Appearing += Handle_Appearing;
 		}
 
 		public GamePage(Config config) : this()
 		{
 			this.config = config;
 			var appData = (ScavengerHuntManager)BindingContext;
-
-
 
 			/*
 			// generate some dummy items to display (if less than 10 present)
@@ -44,6 +43,21 @@ namespace CyberEyes
 			}
 			*/
 			// ListView.ItemsSource = ItemsToCollect;
+
+			UpdateStats();
+		}
+
+		void Handle_Appearing(object sender, System.EventArgs e)
+		{
+			UpdateStats();
+		}
+
+		void UpdateStats()
+		{
+			var appData = (ScavengerHuntManager)BindingContext;
+
+			pointsLabel.Text = $"Points: {appData.TotalPoints}/{appData.TotalPointsMax}";
+			progressLabel.Text = $"Progress: {appData.ItemsFilled}/{appData.TotalItems}";
 		}
 
 		void Handle_TakePhotoTapped(object sender, System.EventArgs e)

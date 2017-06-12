@@ -27,6 +27,62 @@ namespace CyberEyes
 
 		}
 
+		public int TotalPoints
+		{
+			get
+			{
+				int total = 0;
+
+				for (int i = 0; i < itemList.Items.Count; i++)
+				{
+					total += itemList.Items[i].Points;
+				}
+
+				return total;
+			}
+		}
+
+		public int TotalPointsMax
+		{
+			get
+			{
+				int total = 0;
+
+				for (int i = 0; i < itemList.Items.Count; i++)
+				{
+					total += itemList.Items[i].PointsMax;
+				}
+
+				return total;
+			}
+		}
+
+		public int ItemsFilled
+		{
+			get
+			{
+				int total = 0;
+
+				for (int i = 0; i < itemList.Items.Count; i++)
+				{
+					if (itemList.Items[i].Points > 0)
+					{
+						total++;
+					}
+				}
+
+				return total;
+			}
+		}
+
+		public int TotalItems
+		{
+			get
+			{
+				return itemList.Items.Count;
+			}
+		}
+
 		public void LoadContents()
 		{
 			this.itemList = new ScavengerHuntList();
