@@ -1,4 +1,4 @@
-﻿<Properties StartupConfiguration="{BA53BEE5-0345-4BC8-B6D4-E3FED6DA76A6}|Default">
+<Properties StartupConfiguration="{BA53BEE5-0345-4BC8-B6D4-E3FED6DA76A6}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="CyberEyes/GamePage.xaml.cs">
     <Files>
       <File FileName="CyberEyes/ScavengerHuntItem.cs" Line="28" Column="70" />
@@ -11,8 +11,8 @@
       <File FileName="CyberEyes/ScavengerHuntManager.cs" Line="19" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.CyberEyes.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8DDED814-B2E4-420A-AC39-603D597C876F" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.CyberEyes.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.973cff1666715a5c5e929cd85c23ae94277eaa16" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/gunjan/Projects/CyberEyes/CyberEyes/CyberEyes/TakePhotoPage.xaml.cs" relfile="CyberEyes/TakePhotoPage.xaml.cs" line="111" column="1" />
