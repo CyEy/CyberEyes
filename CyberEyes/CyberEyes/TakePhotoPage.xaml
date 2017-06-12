@@ -22,6 +22,7 @@
 					<Image x:Name="CameraDisplay" Source="{Binding Photo.Source}" />
 				</Frame>
 			</Frame>
+			<!-- Clicked="Handle_TakePhotoClicked"  -->
 			<Button x:Name="TakePhoto" Text="Take Photo" />
 			<Button Text="Return" Clicked="Handle_ReturnClicked" />
 			<!-- Test Photos -->
