@@ -7,22 +7,49 @@ namespace CyberEyes
 {
 	public partial class GamePage : ContentPage
 	{
+		Config config;
+
 		// public List<ScavengerHuntItem> ItemsToCollect = new List<ScavengerHuntItem>();
 
-		public GamePage()
+		public GamePage(Config config)
 		{
 			InitializeComponent();
+			this.config = config;
 			var appData = (ScavengerHuntManager)BindingContext;
 
+			// master list
+			var itemList = new List<string>();
+			var indoorList = new List<string> { "apple", "helmet", "lego", "banana" };
+			var colorList = new List<string> { "black", "blue", "red", "pink" };
+			var expressionList = new List<string> { "anger", "smile", "confused", "sad" };
+			var outdoorList = new List<string> { "tree", "car", "bicycle", "lake" };
+
+
+			if (this.config.UseIndoors)
+			{
+				itemList.AddRange(indoorList);
+			}
+			if (this.config.UseColors)
+			{
+				itemList.AddRange(colorList);
+			}
+			if (this.config.UserFacialExperssions)
+			{
+				itemList.AddRange(expressionList);
+			}
+			if (this.config.UseOutDoors)
+			{
+				itemList.AddRange(outdoorList);
+			}
+
+
 			// generate some dummy items to display (if less than 10 present)
-			for (int i = Math.Max(appData.ItemList.Items.Count - 1, 0); i < 10; i++)
+			for (int i = Math.Max(appData.ItemList.Items.Count - 1, 0); i < itemList.Count; i++)
 			{
 				var newItem = new ScavengerHuntItem()
 				{
-					Title = $"Item Title + {i}",
-					Description = $"Item Description + {i}",
-					Points = 0,
-					PointsMax = 3
+					Title = itemList[i],
+					Description = $"Find: {itemList[i]}",
 				};
 
 				appData.ItemList.Items.Add(newItem);
@@ -35,11 +62,6 @@ namespace CyberEyes
 			}
 
 			// ListView.ItemsSource = ItemsToCollect;
-		}
-
-		void Handle_ModalTapped(object sender, System.EventArgs e)
-		{
-			Navigation.PushModalAsync(new ScoreModalPage(), true);
 		}
 
 		void Handle_TakePhotoTapped(object sender, System.EventArgs e)
