@@ -7,6 +7,8 @@ namespace CyberEyes
 {
 	public partial class MainScreenPage : ContentPage
 	{
+		App app = Application.Current as App;
+
 		public MainScreenPage()
 		{
 			InitializeComponent();
@@ -19,7 +21,7 @@ namespace CyberEyes
 
 		void Handle_ContinueClicked(object sender, System.EventArgs e)
 		{
-			Navigation.PushAsync(new GamePage(), true);
+			Navigation.PushAsync(new GamePage(app.config), true);
 		}
 	}
 }

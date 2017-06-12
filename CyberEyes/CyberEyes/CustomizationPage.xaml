@@ -41,19 +41,19 @@
 			<BoxView HeightRequest="1" Color="Accent" />
 			<StackLayout Orientation="Horizontal">
 				<Label Text="Indoors" />
-				<Switch x:Name="indoorsSwitch" HorizontalOptions="EndAndExpand" Toggled="Handle_Toggled" StyleId="indoorsSwitch"/>
+				<Switch x:Name="indoorsSwitch" IsToggled="true" HorizontalOptions="EndAndExpand" Toggled="Handle_Toggled" StyleId="indoorsSwitch"/>
 			</StackLayout>
 			<StackLayout Orientation="Horizontal">
 				<Label Text="Outdoors" />
-				<Switch x:Name="outdoorsSwitch" HorizontalOptions="EndAndExpand" StyleId="outdoorsSwitch"/>
+				<Switch x:Name="outdoorsSwitch" IsToggled="false" HorizontalOptions="EndAndExpand" StyleId="outdoorsSwitch"/>
 			</StackLayout>
 			<StackLayout Orientation="Horizontal">
 				<Label Text="Facial Expressions" />
-				<Switch x:Name="facialExpressionsSwitch" HorizontalOptions="EndAndExpand" StyleId="facialExpressionsSwitch"/>
+				<Switch x:Name="facialExpressionsSwitch" IsToggled="true" HorizontalOptions="EndAndExpand" StyleId="facialExpressionsSwitch"/>
 			</StackLayout>
 			<StackLayout Orientation="Horizontal">
 				<Label Text="Colors" />
-				<Switch x:Name="colorsSwitch" HorizontalOptions="EndAndExpand" StyleId="colorSwitch" />
+				<Switch x:Name="colorsSwitch" IsToggled="true" HorizontalOptions="EndAndExpand" StyleId="colorSwitch" />
 			</StackLayout>
 			<Button Text="Start Game" Clicked="Handle_StartClicked" />
 		</StackLayout>

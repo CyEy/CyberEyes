@@ -7,6 +7,8 @@ namespace CyberEyes
 {
 	public partial class ConfirmPhotoPage : ContentPage
 	{
+		App app = Application.Current as App;
+
 		public ConfirmPhotoPage()
 		{
 			InitializeComponent();
@@ -16,7 +18,7 @@ namespace CyberEyes
 
 		void Handle_KeepClicked(object sender, System.EventArgs e)
 		{
-			Navigation.PushAsync(new GamePage(), true);
+			Navigation.PushAsync(new GamePage(app.config), true);
 		}
 
 		void Handle_RetakeClicked(object sender, System.EventArgs e)
