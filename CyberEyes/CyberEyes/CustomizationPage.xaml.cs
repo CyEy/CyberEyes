@@ -12,11 +12,14 @@ namespace CyberEyes
 		public CustomizationPage()
 		{
 			InitializeComponent();
+			app.config.UseIndoors = true;
+			app.config.UseColors = true;
+			app.config.UserFacialExperssions = true;
 		}
 
 		void Handle_StartClicked(object sender, System.EventArgs e)
 		{
-			Navigation.PushAsync(new GamePage(), true);
+			Navigation.PushAsync(new GamePage(app.config), true);
 		}
 
 		void Handle_EasyTapped(object sender, System.EventArgs e)
