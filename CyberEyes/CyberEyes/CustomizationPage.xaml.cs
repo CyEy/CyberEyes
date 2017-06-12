@@ -68,6 +68,23 @@ namespace CyberEyes
 				app.AppData.ItemList.Items.Add(newItem);
 			}
 
+			// Set time to complete task
+			switch (app.config.Difficulty)
+			{
+				case DifficultyLevel.Easy:
+					app.AppData.TimeLeftInSeconds = 15 * 60;
+					break;
+				case DifficultyLevel.Medium:
+					app.AppData.TimeLeftInSeconds = 10 * 60;
+					break;
+				case DifficultyLevel.Hard:
+					app.AppData.TimeLeftInSeconds = 3 * 60;
+					break;
+				default:
+					app.AppData.TimeLeftInSeconds = 59;
+					break;
+			}
+
 			// begin the game
 			Navigation.PushAsync(new GamePage(app.config), true);
 		}

@@ -14,12 +14,19 @@ namespace CyberEyes
 
 		FileHelper fileHelper = new FileHelper(); // handles FileIO per platform
 
+		int timeLeftInSeconds;
 		ScavengerHuntList itemList = new ScavengerHuntList();
 
 		public ScavengerHuntList ItemList
 		{
 			get { return itemList; }
 			set { SetProperty(ref itemList, value); }
+		}
+
+		public int TimeLeftInSeconds
+		{
+			get { return timeLeftInSeconds; }
+			set { SetProperty(ref timeLeftInSeconds, value); }
 		}
 
 		public ScavengerHuntManager()

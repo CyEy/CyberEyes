@@ -14,6 +14,10 @@ namespace CyberEyes
 			AppData.LoadContents();
 
 			// Set settings
+			if (Properties.ContainsKey("TimeLeftInSeconds"))
+			{
+				AppData.TimeLeftInSeconds = (int)Properties["TimeLeftInSeconds"];
+			}
 
 			MainPage = new NavigationPage(new MainScreenPage());
 		}
@@ -28,6 +32,7 @@ namespace CyberEyes
 			// Handle when your app sleeps
 			// Save settings
 			AppData.SaveContents();
+			Properties["TimeLeftInSeconds"] = AppData.TimeLeftInSeconds;
 		}
 
 		protected override void OnResume()

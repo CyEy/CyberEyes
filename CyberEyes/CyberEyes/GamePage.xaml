@@ -19,7 +19,7 @@
 				<StackLayout>
 					<Label x:Name="progressLabel" Text="Progress: 3 / 10 Items" />
 					<Label x:Name="pointsLabel" Text="Points: 7 / 20" />
-					<Label x:Name="timeLeftLabel" Text="Time Left: 59s" />
+					<Label x:Name="timeLeftLabel" Text="Time Left:" />
 				</StackLayout>
 			</Frame>
 			<Button x:Name="submitButton" Text="Submit" HorizontalOptions="FillAndExpand" Clicked="Handle_SubmitClicked" BackgroundColor="Accent" WidthRequest="100" />

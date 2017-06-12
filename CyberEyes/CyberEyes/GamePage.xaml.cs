@@ -14,7 +14,7 @@ namespace CyberEyes
 		public GamePage()
 		{
 			InitializeComponent();
-            this.Appearing += Handle_Appearing;
+			this.Appearing += Handle_Appearing;
 		}
 
 		public GamePage(Config config) : this()
@@ -45,6 +45,30 @@ namespace CyberEyes
 			// ListView.ItemsSource = ItemsToCollect;
 
 			UpdateStats();
+
+			Device.StartTimer(System.TimeSpan.FromSeconds(1), OnTimerTick);
+		}
+
+		bool OnTimerTick()
+		{
+			var appData = (ScavengerHuntManager)BindingContext;
+
+			appData.TimeLeftInSeconds--;
+
+			if (appData.TimeLeftInSeconds < 0)
+			{
+				// go to end
+				Navigation.PushAsync(new EndScreenPage());
+				return false;
+			}
+			else
+			{
+				// otherwise, update relevant labels
+				TimeSpan t = TimeSpan.FromSeconds(appData.TimeLeftInSeconds);
+				timeLeftLabel.Text = $"Time Left: {t.Minutes:D2}:{t.Seconds:D2}";
+			}
+
+			return true;
 		}
 
 		void Handle_Appearing(object sender, System.EventArgs e)
