@@ -14,7 +14,8 @@ namespace CyberEyes
 
 			var appData = (ScavengerHuntManager)BindingContext;
 
-			fTime.Text = String.Format("Time Left: {0}", appData.TimeLeftInSeconds);
+			TimeSpan t = TimeSpan.FromSeconds(appData.TimeLeftInSeconds);
+			fTime.Text = String.Format("Time Left: {0:D2}:{1:D2}", t.Minutes, t.Seconds);
 			fFound.Text = String.Format("Items Found: {0}/{1}", appData.ItemsFilled, appData.TotalItems);
 			fPoints.Text = String.Format("Total Points: {0}/{1}", appData.TotalPoints, appData.TotalPointsMax);
 

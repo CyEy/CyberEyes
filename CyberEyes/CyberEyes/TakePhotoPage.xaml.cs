@@ -60,20 +60,16 @@ namespace CyberEyes
 						var bytes = ms.ToArray();
 						this.item.Base64StringContents = Convert.ToBase64String(bytes);
 
-						// file.Dispose();
 						return stream;
 					});
 
 				ClassifyImage();
-				//or:
-				//image.Source = ImageSource.FromFile(file.Path);
-				//image.Dispose
-
 			};
 		}
 
 		void ClassifyImage()
 		{
+			// Professor: Add Google Vision API key here for this to work
 			string Url = "https://vision.googleapis.com/v1/images:annotate?key=";
 			try
 			{
