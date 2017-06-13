@@ -1,36 +1,29 @@
-﻿<Properties StartupConfiguration="{BA53BEE5-0345-4BC8-B6D4-E3FED6DA76A6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CyberEyes/ConfirmPhotoPage.xaml">
+﻿<Properties StartupConfiguration="{12DB4CA9-B2E1-44EA-B1EE-7B262663C5D0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CyberEyes/EndScreenPage.xaml">
     <Files>
-      <File FileName="CyberEyes/GamePage.xaml" Line="22" Column="52" />
-      <File FileName="CyberEyes/GamePage.xaml.cs" Line="26" Column="3" />
-      <File FileName="CyberEyes/ScoreModalPage.xaml" Line="18" Column="35" />
-      <File FileName="CyberEyes/ScoreModalPage.xaml.cs" Line="43" Column="93" />
-      <File FileName="CyberEyes/TakePhotoPage.xaml.cs" Line="173" Column="1" />
-      <File FileName="CyberEyes/CustomizationPage.xaml.cs" Line="56" Column="53" />
-      <File FileName="CyberEyes/TakePhotoPage.xaml" Line="1" Column="1" />
-      <File FileName="CyberEyes/ParserClass.cs" Line="36" Column="32" />
-      <File FileName="CyberEyes/MainScreenPage.xaml" Line="22" Column="15" />
-      <File FileName="CyberEyes/FileHelper.cs" Line="17" Column="1" />
-      <File FileName="CyberEyes/EndScreenPage.xaml" Line="14" Column="16" />
-      <File FileName="CyberEyes/CyberEyesPage.xaml" Line="1" Column="1" />
+      <File FileName="CyberEyes/ScavengerHuntItem.cs" Line="31" Column="14" />
+      <File FileName="CyberEyes/ParserClass.cs" Line="15" Column="2" />
+      <File FileName="CyberEyes/ScoreModalPage.xaml" Line="1" Column="1" />
+      <File FileName="CyberEyes/TakePhotoPage.xaml.cs" Line="83" Column="5" />
+      <File FileName="CyberEyes/ScoreModalPage.xaml.cs" Line="38" Column="4" />
+      <File FileName="CyberEyes/GamePage.xaml" Line="1" Column="1" />
+      <File FileName="CyberEyes/GamePage.xaml.cs" Line="17" Column="22" />
+      <File FileName="CyberEyes/ScavengerHuntManager.cs" Line="1" Column="1" />
+      <File FileName="CyberEyes/App.xaml.cs" Line="1" Column="7" />
       <File FileName="CyberEyes/CustomizationPage.xaml" Line="1" Column="1" />
-      <File FileName="CyberEyes/ConfirmPhotoPage.xaml" Line="1" Column="1" />
+      <File FileName="CyberEyes/EndScreenPage.xaml" Line="1" Column="1" />
+      <File FileName="CyberEyes/EndScreenPage.xaml.cs" Line="14" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.CyberEyes.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.35D25494-67E5-4344-BEEF-EC776C3478D1" />
+  <MonoDevelop.Ide.ItemProperties.CyberEyes.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.ED74674B-C04B-4DA5-A89C-B1CB729EA00E" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/TakePhotoPage.xaml.cs" relfile="CyberEyes/TakePhotoPage.xaml.cs" line="77" column="1" />
-      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/TakePhotoPage.xaml.cs" relfile="CyberEyes/TakePhotoPage.xaml.cs" line="133" column="1" />
-      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/TakePhotoPage.xaml.cs" relfile="CyberEyes/TakePhotoPage.xaml.cs" line="123" column="1" />
-      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/TakePhotoPage.xaml.cs" relfile="CyberEyes/TakePhotoPage.xaml.cs" line="128" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="CyberEyes/GamePage.xaml.cs" line="68" offsetX="469" offsetY="1206" expression="ListView.SelectedItem" liveUpdate="False" />
     <Watch file="CyberEyes/TakePhotoPage.xaml.cs" line="111" offsetX="897" offsetY="1980" expression="res.responses[0].labelAnnotations[a].description" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.CyberEyes.Droid PreferredExecutionTarget="Android.Nexus_4_API_25" />
+  <MonoDevelop.Ide.ItemProperties.CyberEyes.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MultiItemStartupConfigurations />
 </Properties>
