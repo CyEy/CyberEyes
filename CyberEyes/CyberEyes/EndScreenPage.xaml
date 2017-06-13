@@ -17,9 +17,9 @@
 		<StackLayout>
 			<StackLayout x:Name="topLayout" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
 				<Label FontSize="24" Text="Result" HorizontalOptions="CenterAndExpand" />
-				<Label FontSize="18" Text="Items Found: 8/10" HorizontalOptions="CenterAndExpand" />
-				<Label FontSize="18" Text="Total Points 17/20" HorizontalOptions="CenterAndExpand" />
-				<Label FontSize="18" Text="Time Elapsed: 09:12" HorizontalOptions="CenterAndExpand" />
+				<Label x:Name="fFound" FontSize="18" Text="Items Found:" HorizontalOptions="CenterAndExpand" />
+				<Label x:Name="fPoints" FontSize="18" Text="Total Points:" HorizontalOptions="CenterAndExpand" />
+				<Label x:Name="fTime" FontSize="18" Text="Time Left:" HorizontalOptions="CenterAndExpand" />
 			</StackLayout>
 			<StackLayout x:Name="bottomLayout" Spacing="20" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
 				<Label FontSize="20" Text="Your Rank:" HorizontalOptions="CenterAndExpand" />

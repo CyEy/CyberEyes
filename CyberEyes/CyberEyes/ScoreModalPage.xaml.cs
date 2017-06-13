@@ -10,17 +10,6 @@ namespace CyberEyes
 	{
 		ScavengerHuntItem item;
 
-		//public ScoreModalPage()
-		//{
-		//	InitializeComponent();
-		//	////Image img = new Image { };
-
-		//	item = new ScavengerHuntItem();
-		//	item.Photo.Source = ImageSource.FromResource("CyberEyes.Images.blank_camera.png");
-		//	itemPhoto.Source = ImageSource.FromResource("CyberEyes.Images.blank_camera.png");
-
-		//}
-
 		public ScoreModalPage()
 		{
             InitializeComponent();
@@ -28,12 +17,6 @@ namespace CyberEyes
 
 		public ScoreModalPage(ScavengerHuntItem newItem) : this ()
 		{
-			//ScavengerHuntItem item = new ScavengerHuntItem();
-			//item.Points = newItem.Points;
-			//item.Title = newItem.Title;
-			//item.Points = newItem.Points;
-			// string title = newItem.Title;
-
 			this.item = newItem;
 
 			modalLabel.Text = this.item.Title;
