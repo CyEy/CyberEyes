@@ -13,22 +13,24 @@
 				      </OnPlatform.WinPhone>
 		</OnPlatform>
 	</ContentPage.Padding>
-	<StackLayout>
-		<StackLayout x:Name="topLayout" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
-			<Label FontSize="24" Text="Result" HorizontalOptions="CenterAndExpand" />
-			<Label FontSize="18" Text="Items Found: 8/10" HorizontalOptions="CenterAndExpand" />
-			<Label FontSize="18" Text="Total Points 17/20" HorizontalOptions="CenterAndExpand" />
-			<Label FontSize="18" Text="Time Elapsed: 09:12" HorizontalOptions="CenterAndExpand" />
-		</StackLayout>
-		<StackLayout x:Name="bottomLayout" Spacing="20" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
-			<Label FontSize="20" Text="Your Rank:" HorizontalOptions="CenterAndExpand" />
-			<Label FontSize="22" Text="Master Treasure Hunter" HorizontalOptions="CenterAndExpand" />
-			<Frame BackgroundColor="Black">
-				<Frame BackgroundColor="White">
-					<Image x:Name="finalPhoto" />
+	<ScrollView>
+		<StackLayout>
+			<StackLayout x:Name="topLayout" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+				<Label FontSize="24" Text="Result" HorizontalOptions="CenterAndExpand" />
+				<Label FontSize="18" Text="Items Found: 8/10" HorizontalOptions="CenterAndExpand" />
+				<Label FontSize="18" Text="Total Points 17/20" HorizontalOptions="CenterAndExpand" />
+				<Label FontSize="18" Text="Time Elapsed: 09:12" HorizontalOptions="CenterAndExpand" />
+			</StackLayout>
+			<StackLayout x:Name="bottomLayout" Spacing="20" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+				<Label FontSize="20" Text="Your Rank:" HorizontalOptions="CenterAndExpand" />
+				<Label FontSize="22" Text="Master Treasure Hunter" HorizontalOptions="CenterAndExpand" />
+				<Frame BackgroundColor="Black">
+					<Frame BackgroundColor="White">
+						<Image x:Name="finalPhoto" />
+					</Frame>
 				</Frame>
-			</Frame>
-			<Button Text="Start New Game" Clicked="Handle_NewGameClicked" />
+				<Button Text="Start New Game" Clicked="Handle_NewGameClicked" />
+			</StackLayout>
 		</StackLayout>
-	</StackLayout>
+	</ScrollView>
 </ContentPage>

@@ -1,14 +1,20 @@
 ﻿<Properties StartupConfiguration="{BA53BEE5-0345-4BC8-B6D4-E3FED6DA76A6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CyberEyes/GamePage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CyberEyes/ConfirmPhotoPage.xaml">
     <Files>
-      <File FileName="CyberEyes/ScavengerHuntManager.cs" Line="28" Column="37" />
-      <File FileName="CyberEyes/ScoreModalPage.xaml" Line="28" Column="66" />
-      <File FileName="CyberEyes/TakePhotoPage.xaml.cs" Line="134" Column="6" />
-      <File FileName="CyberEyes/ScavengerHuntItem.cs" Line="8" Column="15" />
-      <File FileName="CyberEyes/GamePage.xaml" Line="22" Column="56" />
-      <File FileName="CyberEyes/GamePage.xaml.cs" Line="64" Column="5" />
-      <File FileName="CyberEyes/App.xaml.cs" Line="35" Column="64" />
-      <File FileName="CyberEyes/CustomizationPage.xaml.cs" Line="80" Column="31" />
+      <File FileName="CyberEyes/GamePage.xaml" Line="22" Column="52" />
+      <File FileName="CyberEyes/GamePage.xaml.cs" Line="26" Column="3" />
+      <File FileName="CyberEyes/ScoreModalPage.xaml" Line="18" Column="35" />
+      <File FileName="CyberEyes/ScoreModalPage.xaml.cs" Line="43" Column="93" />
+      <File FileName="CyberEyes/TakePhotoPage.xaml.cs" Line="173" Column="1" />
+      <File FileName="CyberEyes/CustomizationPage.xaml.cs" Line="56" Column="53" />
+      <File FileName="CyberEyes/TakePhotoPage.xaml" Line="1" Column="1" />
+      <File FileName="CyberEyes/ParserClass.cs" Line="36" Column="32" />
+      <File FileName="CyberEyes/MainScreenPage.xaml" Line="22" Column="15" />
+      <File FileName="CyberEyes/FileHelper.cs" Line="17" Column="1" />
+      <File FileName="CyberEyes/EndScreenPage.xaml" Line="14" Column="16" />
+      <File FileName="CyberEyes/CyberEyesPage.xaml" Line="1" Column="1" />
+      <File FileName="CyberEyes/CustomizationPage.xaml" Line="1" Column="1" />
+      <File FileName="CyberEyes/ConfirmPhotoPage.xaml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.CyberEyes.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.35D25494-67E5-4344-BEEF-EC776C3478D1" />

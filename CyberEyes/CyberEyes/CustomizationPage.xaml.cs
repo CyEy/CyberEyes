@@ -28,10 +28,10 @@ namespace CyberEyes
 			// select items for the search, based on selection
 			// master list
 			var itemList = new List<string>();
-			var indoorList = new List<string> { "apple", "helmet", "lego", "banana" };
+			var indoorList = new List<string> { "apple", "helmet", "lego", "banana", "stapler", "eraser", "pen" };
 			var colorList = new List<string> { "green", "blue", "red", "pink" };
 			var expressionList = new List<string> { "anger", "smile", "confused", "sad" };
-			var outdoorList = new List<string> { "tree", "car", "bicycle", "lake" };
+			var outdoorList = new List<string> { "tree", "car", "bicycle", "lake", "bird" };
 
 
 			if (app.config.UseIndoors)
@@ -51,7 +51,9 @@ namespace CyberEyes
 				itemList.AddRange(outdoorList);
 			}
 
-			for (int i = 0; i < Max_items; i++)
+			int fullCount = itemList.Count;
+
+			for (int i = 0; i < Math.Min(Max_items, fullCount); i++)
 			{
 				// pick a random prompt
 				Random random = new Random(DateTime.Now.Millisecond);

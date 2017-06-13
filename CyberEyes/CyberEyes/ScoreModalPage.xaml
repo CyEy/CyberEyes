@@ -13,18 +13,19 @@
 				      </OnPlatform.WinPhone>
 		</OnPlatform>
 	</ContentPage.Padding>
-	<StackLayout x:Name="modalSL" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
-		<Label x:Name="modalLabel" FontSize="24" HorizontalOptions="CenterAndExpand" />
-		<Frame BackgroundColor="Black">
-			<Frame BackgroundColor="White">
-				<Image x:Name="itemPhoto" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="200" WidthRequest="200" />
+	<ScrollView>
+		<StackLayout x:Name="modalSL" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+			<Label x:Name="modalLabel" FontSize="24" HorizontalOptions="CenterAndExpand" />
+			<Frame BackgroundColor="Black">
+				<Frame BackgroundColor="White">
+					<Image x:Name="itemPhoto" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="200" WidthRequest="200" />
+				</Frame>
 			</Frame>
-		</Frame>
-
-		<Label x:Name="itemMatch" FontSize="20" Text="Match Confidence:" HorizontalOptions="CenterAndExpand" />
-		<Label x:Name="otherItems" FontSize="12" Text="Other Item Matches:" HorizontalOptions="CenterAndExpand" />
-		<Label x:Name="otherItem1" FontSize="11" Text=":" HorizontalOptions="CenterAndExpand" />
-		<Label x:Name="otherItem2" FontSize="11" Text=":" HorizontalOptions="CenterAndExpand" />
-		<Button x:Name="close" Text="Close" Clicked="Handle_Clicked" />
-	</StackLayout>
+			<Label x:Name="itemMatch" FontSize="20" Text="Match Confidence:" HorizontalOptions="CenterAndExpand" />
+			<Label x:Name="otherItems" FontSize="12" Text="Other Item Matches:" HorizontalOptions="CenterAndExpand" />
+			<Label x:Name="otherItem1" FontSize="11" Text=":" HorizontalOptions="CenterAndExpand" />
+			<Label x:Name="otherItem2" FontSize="11" Text=":" HorizontalOptions="CenterAndExpand" />
+			<Button x:Name="close" Text="Close" Clicked="Handle_Clicked" />
+		</StackLayout>
+	</ScrollView>
 </ContentPage>

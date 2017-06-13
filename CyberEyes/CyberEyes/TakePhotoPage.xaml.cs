@@ -171,13 +171,6 @@ namespace CyberEyes
 			ClassifyImage();
 		}
 
-		/*
-		void Handle_TakeClicked(object sender, System.EventArgs e)
-		{
-			Navigation.PushAsync(new ConfirmPhotoPage(), true);
-		}
-		*/
-
 		void Handle_ReturnClicked(object sender, System.EventArgs e)
 		{
 			Navigation.PopModalAsync();

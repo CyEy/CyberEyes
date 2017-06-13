@@ -13,9 +13,11 @@
 				      </OnPlatform.WinPhone>
 		</OnPlatform>
 	</ContentPage.Padding>
-	<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Spacing="80">
-		<Label FontSize="24" Text="Welcome to Cyber Eyes" HorizontalOptions="CenterAndExpand" />
-		<Button Text="Start New Game" Clicked="Handle_StartClicked" />
-		<Button Text="Continue Existing Game" Clicked="Handle_ContinueClicked" />
-	</StackLayout>
+	<ScrollView>
+		<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Spacing="80">
+			<Label FontSize="24" Text="Welcome to Cyber Eyes" HorizontalOptions="CenterAndExpand" />
+			<Button Text="Start New Game" Clicked="Handle_StartClicked" />
+			<Button Text="Continue Existing Game" Clicked="Handle_ContinueClicked" />
+		</StackLayout>
+	</ScrollView>
 </ContentPage>
