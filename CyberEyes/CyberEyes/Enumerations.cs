@@ -4,7 +4,7 @@ namespace CyberEyes
 	public enum DifficultyLevel
 	{
 		Easy = 0,
-		Medium = 0,
-		Hard = 0
+		Medium = 1,
+		Hard = 2
 	}
 }

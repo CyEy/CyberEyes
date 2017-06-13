@@ -1,17 +1,30 @@
 ﻿<Properties StartupConfiguration="{BA53BEE5-0345-4BC8-B6D4-E3FED6DA76A6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CyberEyes/TakePhotoPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CyberEyes/ConfirmPhotoPage.xaml">
     <Files>
+      <File FileName="CyberEyes/GamePage.xaml" Line="22" Column="52" />
+      <File FileName="CyberEyes/GamePage.xaml.cs" Line="26" Column="3" />
+      <File FileName="CyberEyes/ScoreModalPage.xaml" Line="18" Column="35" />
+      <File FileName="CyberEyes/ScoreModalPage.xaml.cs" Line="43" Column="93" />
+      <File FileName="CyberEyes/TakePhotoPage.xaml.cs" Line="173" Column="1" />
+      <File FileName="CyberEyes/CustomizationPage.xaml.cs" Line="56" Column="53" />
       <File FileName="CyberEyes/TakePhotoPage.xaml" Line="1" Column="1" />
-      <File FileName="CyberEyes/TakePhotoPage.xaml.cs" Line="84" Column="27" />
+      <File FileName="CyberEyes/ParserClass.cs" Line="36" Column="32" />
+      <File FileName="CyberEyes/MainScreenPage.xaml" Line="22" Column="15" />
+      <File FileName="CyberEyes/FileHelper.cs" Line="17" Column="1" />
+      <File FileName="CyberEyes/EndScreenPage.xaml" Line="14" Column="16" />
+      <File FileName="CyberEyes/CyberEyesPage.xaml" Line="1" Column="1" />
+      <File FileName="CyberEyes/CustomizationPage.xaml" Line="1" Column="1" />
+      <File FileName="CyberEyes/ConfirmPhotoPage.xaml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.CyberEyes.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.35D25494-67E5-4344-BEEF-EC776C3478D1" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/TakePhotoPage.xaml.cs" relfile="CyberEyes/TakePhotoPage.xaml.cs" line="111" column="1" />
-      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/ScoreModalPage.xaml.cs" relfile="CyberEyes/ScoreModalPage.xaml.cs" line="39" column="1" />
       <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/TakePhotoPage.xaml.cs" relfile="CyberEyes/TakePhotoPage.xaml.cs" line="77" column="1" />
+      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/TakePhotoPage.xaml.cs" relfile="CyberEyes/TakePhotoPage.xaml.cs" line="133" column="1" />
+      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/TakePhotoPage.xaml.cs" relfile="CyberEyes/TakePhotoPage.xaml.cs" line="123" column="1" />
+      <Breakpoint file="/Users/elliott/Documents/school/COEN_268_Mobile_Application_Development/code/CyberEyes/CyberEyes/TakePhotoPage.xaml.cs" relfile="CyberEyes/TakePhotoPage.xaml.cs" line="128" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>

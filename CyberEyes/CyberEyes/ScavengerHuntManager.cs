@@ -14,6 +14,7 @@ namespace CyberEyes
 
 		FileHelper fileHelper = new FileHelper(); // handles FileIO per platform
 
+		int timeLeftInSeconds;
 		ScavengerHuntList itemList = new ScavengerHuntList();
 
 		public ScavengerHuntList ItemList
@@ -22,9 +23,71 @@ namespace CyberEyes
 			set { SetProperty(ref itemList, value); }
 		}
 
+		public int TimeLeftInSeconds
+		{
+			get { return timeLeftInSeconds; }
+			set { SetProperty(ref timeLeftInSeconds, value); }
+		}
+
 		public ScavengerHuntManager()
 		{
 
+		}
+
+		public int TotalPoints
+		{
+			get
+			{
+				int total = 0;
+
+				for (int i = 0; i < itemList.Items.Count; i++)
+				{
+					total += itemList.Items[i].Points;
+				}
+
+				return total;
+			}
+		}
+
+		public int TotalPointsMax
+		{
+			get
+			{
+				int total = 0;
+
+				for (int i = 0; i < itemList.Items.Count; i++)
+				{
+					total += itemList.Items[i].PointsMax;
+				}
+
+				return total;
+			}
+		}
+
+		public int ItemsFilled
+		{
+			get
+			{
+				int total = 0;
+
+				for (int i = 0; i < itemList.Items.Count; i++)
+				{
+					if (itemList.Items[i].Points > 0)
+					{
+						total++;
+					}
+				}
+
+				return total;
+			}
+		}
+
+		public int TotalItems
+		{
+			get
+			{
+				return itemList.Items.Count;
+			}
 		}
 
 		public void LoadContents()

@@ -13,7 +13,8 @@ namespace CyberEyes
 
 		public GamePage()
 		{
-            InitializeComponent();
+			InitializeComponent();
+			this.Appearing += Handle_Appearing;
 		}
 
 		public GamePage(Config config) : this()
@@ -21,32 +22,7 @@ namespace CyberEyes
 			this.config = config;
 			var appData = (ScavengerHuntManager)BindingContext;
 
-			// master list
-			var itemList = new List<string>();
-			var indoorList = new List<string> { "apple", "helmet", "lego", "banana" };
-			var colorList = new List<string> { "black", "blue", "red", "pink" };
-			var expressionList = new List<string> { "anger", "smile", "confused", "sad" };
-			var outdoorList = new List<string> { "tree", "car", "bicycle", "lake" };
-
-
-			if (this.config.UseIndoors)
-			{
-				itemList.AddRange(indoorList);
-			}
-			if (this.config.UseColors)
-			{
-				itemList.AddRange(colorList);
-			}
-			if (this.config.UserFacialExperssions)
-			{
-				itemList.AddRange(expressionList);
-			}
-			if (this.config.UseOutDoors)
-			{
-				itemList.AddRange(outdoorList);
-			}
-
-
+			/*
 			// generate some dummy items to display (if less than 10 present)
 			for (int i = Math.Max(appData.ItemList.Items.Count - 1, 0); i < itemList.Count; i++)
 			{
@@ -59,13 +35,53 @@ namespace CyberEyes
 				appData.ItemList.Items.Add(newItem);
 			}
 
+			// filename is deprecated
 			// ensure everything has a filename too
 			for (int i = 0; i < appData.ItemList.Items.Count; i++)
 			{
 				appData.ItemList.Items[i].PhotoFilename = $"image_{i}.jpg";
 			}
-
+			*/
 			// ListView.ItemsSource = ItemsToCollect;
+
+			UpdateStats();
+
+			Device.StartTimer(System.TimeSpan.FromSeconds(1), OnTimerTick);
+		}
+
+		bool OnTimerTick()
+		{
+			var appData = (ScavengerHuntManager)BindingContext;
+
+			appData.TimeLeftInSeconds--;
+
+			if (appData.TimeLeftInSeconds < 0)
+			{
+				// go to end
+				Navigation.PushAsync(new EndScreenPage());
+				return false;
+			}
+			else
+			{
+				// otherwise, update relevant labels
+				TimeSpan t = TimeSpan.FromSeconds(appData.TimeLeftInSeconds);
+				timeLeftLabel.Text = $"Time Left: {t.Minutes:D2}:{t.Seconds:D2}";
+			}
+
+			return true;
+		}
+
+		void Handle_Appearing(object sender, System.EventArgs e)
+		{
+			UpdateStats();
+		}
+
+		void UpdateStats()
+		{
+			var appData = (ScavengerHuntManager)BindingContext;
+
+			pointsLabel.Text = $"Points: {appData.TotalPoints}/{appData.TotalPointsMax}";
+			progressLabel.Text = $"Progress: {appData.ItemsFilled}/{appData.TotalItems}";
 		}
 
 		void Handle_TakePhotoTapped(object sender, System.EventArgs e)
